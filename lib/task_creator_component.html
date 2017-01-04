@@ -1,0 +1,11 @@
+<input
+        #task
+        (keyup.enter)="addTask(task.value)"
+        (blur)="addTask(task.value); task.value=''"
+/>
+<button
+        (click)="addTask(task.value)"
+        class="blue"
+>add</button>
+
+<tasks-list></tasks-list>
