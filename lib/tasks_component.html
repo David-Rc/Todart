@@ -1,8 +1,9 @@
 <ul>
     <li *ngFor="let task of tasks"
     >
-        <span (click)="onSelect(task)">{{task.text}}</span><button (click)="removeTask(task)">X</button>
+        <span class="badge" (mouseover)="onSelect(task)" (mouseleave)="onSelect(null)">{{task.title}}</span><button (click)="removeTask(task)">X</button><button (click)="edit(task)">edit</button>
     </li>
 </ul>
 
-<task-details *ngIf="selectedTask != null && tasks.indexOf(selectedTask) >= 0" [task]="selectedTask"></task-details>
+<task-details *ngIf="selectedTask != null" [task]="selectedTask"></task-details>
+<task-edit (editEvent)="edit($event)" *ngIf="editTask != null && tasks.indexOf(editTask) >= 0" [task]="editTask"></task-edit>

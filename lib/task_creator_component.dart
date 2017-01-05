@@ -19,7 +19,10 @@ class TaskCreatorComponent
 
   addTask(String taskTitle)
   {
-    _taskService.addTask(taskTitle);
+    if(taskTitle.length > 0)
+    {
+      _taskService.addTask(taskTitle);
+    }
   }
 
 }

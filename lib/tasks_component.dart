@@ -2,6 +2,7 @@ import 'package:angular2/core.dart';
 import 'dart:async';
 
 import 'package:dart_app/task_details_component.dart';
+import 'package:dart_app/task_editor_component.dart';
 
 import 'package:dart_app/task_service.dart';
 import 'package:dart_app/Class/Task.dart';
@@ -9,12 +10,15 @@ import 'package:dart_app/Class/Task.dart';
 @Component(
     selector: "tasks-list",
     templateUrl: 'tasks_component.html',
-    directives: const [TaskDetailsComponent],
+    directives: const [TaskDetailsComponent, TaskEditorComponent],
     providers: const [TaskService]
 )
 
 class TaskComponent implements OnInit
 {
+
+
+
   List<Task> tasks;
 
   final TaskService _taskService;
@@ -36,16 +40,17 @@ class TaskComponent implements OnInit
     _taskService.removeTask(task);
   }
 
-  updateTask(Task task)
-  {
-    _taskService.updateTask(task);
-  }
-
-
   Task selectedTask;
+  Task editTask;
 
   onSelect(Task task)
   {
     selectedTask = task;
   }
+
+  edit(Task task)
+  {
+    editTask = task;
+  }
+
 }

@@ -15,11 +15,7 @@ class TaskService
 
   addTask(String taskTitle)
   {
-    if(taskTitle.length > 0)
-    {
-      mockTasks.add(new Task(1, taskTitle, 'CURRENT_USER', date));
-    }
-
+    mockTasks.add(new Task(1, taskTitle, 'CURRENT_USER'));
   }
 
   removeTask(Task task)
@@ -27,8 +23,9 @@ class TaskService
     mockTasks.remove(task);
   }
 
-  updateTask(Task task)
+  updateTask(Task task, String taskTitle)
   {
-
+      task.title = taskTitle;
+      task.modifyDate = new DateTime.now();
   }
 }
