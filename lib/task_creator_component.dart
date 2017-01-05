@@ -17,9 +17,9 @@ class TaskCreatorComponent
   TaskCreatorComponent(this._taskService);
 
 
-  addTask(String task)
+  addTask(String taskTitle)
   {
-    _taskService.addTask(task);
+    _taskService.addTask(taskTitle);
   }
 
 }

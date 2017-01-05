@@ -1,9 +1,9 @@
 class Task
 {
   final int id;
-  String text;
+  String title;
   String auteur;
   DateTime date = new DateTime.now();
 
-  Task(this.id, this.text, this.auteur, this.date);
+  Task(this.id, this.title, this.auteur, this.date);
 }

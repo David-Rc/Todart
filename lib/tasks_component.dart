@@ -1,5 +1,4 @@
 import 'package:angular2/core.dart';
-import 'package:angular2_components/angular2_components.dart';
 import 'dart:async';
 
 import 'package:dart_app/task_details_component.dart';
@@ -10,8 +9,8 @@ import 'package:dart_app/Class/Task.dart';
 @Component(
     selector: "tasks-list",
     templateUrl: 'tasks_component.html',
-    directives: const [materialDirectives, TaskDetailsComponent],
-    providers: const [materialProviders, TaskService]
+    directives: const [TaskDetailsComponent],
+    providers: const [TaskService]
 )
 
 class TaskComponent implements OnInit

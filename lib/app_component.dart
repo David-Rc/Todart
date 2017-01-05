@@ -6,7 +6,6 @@ import 'package:dart_app/task_creator_component.dart';
 
 @Component(
   selector: 'my-app',
-  styleUrls: const ['app_component.css'],
   templateUrl: 'app_component.html',
   directives: const [TaskCreatorComponent],
 )
@@ -14,9 +13,7 @@ import 'package:dart_app/task_creator_component.dart';
 
 class AppComponent{
 
-  String title = "Todart";
-
-
+  String appTitle = "Todart";
 
 }
 

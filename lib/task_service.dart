@@ -13,11 +13,11 @@ class TaskService
   // ignore: conflicting_dart_import
   Future<List<Task>> getTasks() async => mockTasks;
 
-  addTask(String text)
+  addTask(String taskTitle)
   {
-    if(text.length > 0)
+    if(taskTitle.length > 0)
     {
-      mockTasks.add(new Task(1, text, 'CURRENT_USER', date));
+      mockTasks.add(new Task(1, taskTitle, 'CURRENT_USER', date));
     }
 
   }
