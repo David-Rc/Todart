@@ -1,0 +1,12 @@
+.tasks
+{
+    list-style: none;
+}
+.checked
+{
+    text-decoration: line-through;
+}
+.selected
+{
+    font-weight: bold;
+}

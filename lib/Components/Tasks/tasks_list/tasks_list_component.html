@@ -1,0 +1,20 @@
+<ul class="tasks">
+    <li *ngFor="let task of tasks"
+    >
+        <input type="checkbox" [(ngModel)]="task.checked" checked="checked"/>
+        <button (click)="onSelect(task)" (click)="edit(null)"><></button>
+        <button (click)="edit(task)" (click)="onSelect(null)">|</button>
+        <button (click)="removeTask(task)">x</button>
+        <span
+                [class.checked]="task.checked"
+                [class.selected]="task == selectedTask"
+        >{{task.title}}</span>
+
+    </li>
+</ul>
+
+<button *ngIf="tasks != null && tasks.length > 0" (click)="removeAll()">Remove All</button>
+
+<task-details *ngIf="selectedTask != null && tasks.indexOf(selectedTask) >= 0" [task]="selectedTask"></task-details>
+<task-edit (errorMsg)="onError($event)" (editEvent)="edit($event)" *ngIf="editTask != null && tasks.indexOf(editTask) >= 0" [task]="editTask"></task-edit>
+<error-msg  *ngIf="errorMsg"></error-msg>

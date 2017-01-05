@@ -1,0 +1,5 @@
+<h1>{{appTitle}}</h1>
+
+<task-creator (errorMsg)="onError($event)"></task-creator>
+
+<error-msg  *ngIf="errorMsg"></error-msg>

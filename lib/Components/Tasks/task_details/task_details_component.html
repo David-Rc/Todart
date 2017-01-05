@@ -1,0 +1,10 @@
+<div #wrappingModal>
+
+        <h2>{{task.title}}</h2>
+        <p><span>ID : </span> {{task.id}}</p>
+        <p><span>Author : </span>{{task.author}}</p>
+        <p><span>Created date : </span>{{task.createdDate}}</p>
+        <p *ngIf="task.modifyDate != null"><span>Modify date : </span>{{task.modifyDate}}</p>
+</div>
+
+
