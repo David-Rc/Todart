@@ -21,7 +21,6 @@ class AppComponent{
   onError(bool event)
   {
     errorMsg = event;
-    print(event);
   }
 
 

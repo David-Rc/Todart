@@ -16,5 +16,5 @@
 <button *ngIf="tasks != null && tasks.length > 0" (click)="removeAll()">Remove All</button>
 
 <task-details *ngIf="selectedTask != null && tasks.indexOf(selectedTask) >= 0" [task]="selectedTask"></task-details>
-<task-edit (errorMsg)="onError($event)" (editEvent)="edit($event)" *ngIf="editTask != null && tasks.indexOf(editTask) >= 0" [task]="editTask"></task-edit>
-<error-msg  *ngIf="errorMsg"></error-msg>
+<task-edit (errorMsg)="onError($event)"  (editEvent)="edit($event)" *ngIf="editTask != null && tasks.indexOf(editTask) >= 0" [task]="editTask"></task-edit>
+<error-msg   *ngIf="errorMsg" [message]="message"></error-msg>

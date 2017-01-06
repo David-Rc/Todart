@@ -6,3 +6,4 @@
 <button  (click)="addTask(task.value)">add</button>
 
 <tasks-list></tasks-list>
+<error-msg  *ngIf="errorMsg" [message]="message"></error-msg>

@@ -8,6 +8,7 @@ import 'package:angular2/core.dart';
 class ErrorMessageComponent
 {
 
-
+  @Input()
+  String message = "ERROR";
 
 }

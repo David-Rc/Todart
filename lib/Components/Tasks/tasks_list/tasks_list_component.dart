@@ -42,6 +42,7 @@ class TaskListComponent implements OnInit
   removeTask(Task task)
   {
     _taskService.removeTask(task);
+    errorMsg = _taskService.onError();
   }
 
   Task selectedTask;
@@ -60,6 +61,7 @@ class TaskListComponent implements OnInit
   removeAll()
   {
     _taskService.removeAll();
+    errorMsg = _taskService.onError();
   }
 
   onError(bool event)
