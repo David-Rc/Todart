@@ -1,7 +1,6 @@
 <p>{{task.title}}</p>
 <input #editTitle [(ngModel)]="task.title" placeholder="title"/>
-<button>
-    <input *ngIf="task.title.length >= 1" type="hidden" (click)="updateTask(task, editTitle.value)"/>
+<button *ngIf="task.title.length >= 1" (click)="updateTask(task, editTitle.value)">
     Valid
 </button>
 <error-msg *ngIf="task.title.length <= 0" [message]="message"></error-msg>
